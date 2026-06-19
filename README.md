@@ -10,9 +10,9 @@ A full-stack TypeScript application that accepts a city or town and returns a **
 
 | Component | URL |
 |-----------|-----|
-| Frontend | *Deploy to Vercel — see instructions below* |
-| Backend API | *Deploy to Vercel — see instructions below* |
-| GraphQL Playground | `http://localhost:4000/graphql` (local) |
+| Frontend | https://weather-activity-tracker-frontend.vercel.app/ |
+| Backend API | https://weather-activity-tracker-backend.vercel.app/ |
+| GraphQL Playground | https://weather-activity-tracker-backend.vercel.app/graphql |
 
 ---
 
