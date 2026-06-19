@@ -1,35 +1,29 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "builds": [
     {
-      "src": "dist/index.js",
+      "src": "api/graphql.js",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/health",
-      "dest": "dist/index.js"
+      "source": "/graphql",
+      "destination": "/api/graphql"
     },
     {
-      "src": "/ready",
-      "dest": "dist/index.js"
+      "source": "/health",
+      "destination": "/api/graphql"
     },
     {
-      "src": "/graphql",
-      "dest": "dist/index.js",
-      "methods": ["GET", "POST", "OPTIONS"]
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.js"
+      "source": "/(.*)",
+      "destination": "/api/graphql"
     }
   ],
   "headers": [
     {
-      "source": "/graphql",
+      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
