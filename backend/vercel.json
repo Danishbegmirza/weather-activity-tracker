@@ -1,23 +1,22 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
   "builds": [
     {
-      "src": "api/graphql.js",
+      "src": "api/graphql.ts",
       "use": "@vercel/node"
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/graphql"
+    },
     {
       "source": "/graphql",
       "destination": "/api/graphql"
     },
     {
       "source": "/health",
-      "destination": "/api/graphql"
-    },
-    {
-      "source": "/(.*)",
       "destination": "/api/graphql"
     }
   ],
