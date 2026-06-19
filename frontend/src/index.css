@@ -144,6 +144,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Search Bar styles */
+.search-section {
+  position: relative;
+  z-index: 100;
+}
+
+.search-container {
+  position: relative;
+  z-index: 100;
+}
+
 .search-input-wrapper {
   display: flex;
   align-items: center;
@@ -204,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 105%;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 1000;
   max-height: 300px;
   overflow-y: auto;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
@@ -273,6 +283,8 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-container {
   padding: 1.25rem;
   height: fit-content;
+  position: relative;
+  z-index: 10;
 }
 
 .sidebar-header {
